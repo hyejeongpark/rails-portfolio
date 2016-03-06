@@ -1,0 +1,13 @@
+<div id="main">
+	<h2>Works</h2>
+
+	<% @work.each do |work| %>
+		<div><%= image_tag work[:img] %></div>
+		<div class="con">
+			<h3><%= work[:title] %></h3>
+			<p><%= work[:content] %></p>
+		</div>
+		<div class="clear"></div>
+	<% end %>
+
+</div>

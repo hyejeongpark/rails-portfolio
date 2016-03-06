@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hyejeong Park</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="container">
+			<div id="sidebar">
+				<a href="/">
+					<%= image_tag 'home.JPG' %>
+				</a>
+				<a href="/"><h3>Hyejeong Park</h3></a>
+				<ul>
+					<li>
+						<%= link_to 'home', controller: 'main' %>
+					</li>
+					<li>
+						<%= link_to 'about', controller: 'about' %>
+					</li>
+					<li>
+						<%= link_to 'works', controller: 'work' %>
+					</li>
+					<li><a href="http://hyejeongpark.tumblr.com">archive</a></li>
+				</ul>
+			</div>
+
+
+		<%= yield %>
+			
+			
+			<div id="footer">
+				Copyright © 2015 Hyejeong Park. All rights reserved.
+			</div>
+		</div>
+	</body>
+</html>
